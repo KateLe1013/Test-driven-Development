@@ -1,5 +1,7 @@
 package resource.model;
 
+import java.util.Random;
+
 public class Dice {
 
 	private int value;
@@ -11,5 +13,10 @@ public class Dice {
 
 	public void setValue(int i) {
 		value = i;
+	}
+	
+	public int rollDice() {
+		value = new Random().nextInt(6)+1;
+		return 0;
 	}
 }
