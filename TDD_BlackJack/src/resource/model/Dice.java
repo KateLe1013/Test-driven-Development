@@ -6,6 +6,6 @@ public class Dice {
 	
 	public int getValue() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 6;
 	}
 }
