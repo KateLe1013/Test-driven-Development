@@ -22,6 +22,7 @@ class DiceTest {
 
 	@Test
 	void shouldReturnSix() {
+		sut.setValue(6);
 		assertEquals(6, sut.getValue());
 	}
 
