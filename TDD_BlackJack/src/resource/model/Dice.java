@@ -19,4 +19,8 @@ public class Dice {
 		value = new Random().nextInt(6)+1;
 		return value;
 	}
+
+	public boolean isSelected() {
+		return false;
+	}
 }

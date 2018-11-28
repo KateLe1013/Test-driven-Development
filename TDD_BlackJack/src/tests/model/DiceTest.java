@@ -31,6 +31,11 @@ class DiceTest {
 	void shouldHaveRandomValues() {
 		checkRandomNumberRange(sut.rollDice());
 	}
+	
+	@Test
+	void shouldTestIsSelected() {
+		assertTrue(sut.isSelected());
+	}
 
 	private void checkRandomNumberRange(int value) {
 		int low = 1;
