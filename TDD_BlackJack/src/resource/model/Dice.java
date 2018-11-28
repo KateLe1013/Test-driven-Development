@@ -21,6 +21,6 @@ public class Dice {
 	}
 
 	public boolean isSelected() {
-		return false;
+		return true;
 	}
 }
