@@ -5,6 +5,7 @@ import java.util.Random;
 public class Dice {
 
 	private int value;
+	private boolean selected = true;
 
 	public int getValue() {
 		// TODO Auto-generated method stub
@@ -14,13 +15,13 @@ public class Dice {
 	public void setValue(int i) {
 		value = i;
 	}
-	
+
 	public int rollDice() {
-		value = new Random().nextInt(6)+1;
+		value = new Random().nextInt(6) + 1;
 		return value;
 	}
 
 	public boolean isSelected() {
-		return true;
+		return selected;
 	}
 }
