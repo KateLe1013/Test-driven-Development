@@ -1,7 +1,7 @@
 package resource.model;
 
 import java.util.Random;
-import java.util.function.BooleanSupplier;
+
 
 public class Dice {
 
@@ -27,6 +27,6 @@ public class Dice {
 	}
 
 	public boolean select() {
-		return false;
+		return true;
 	}
 }
