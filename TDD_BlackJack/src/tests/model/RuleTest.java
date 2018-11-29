@@ -100,5 +100,13 @@ class RuleTest {
 		sut = new RuleSixes();
 		assertEquals("Sixes", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleSixesScores() {
+		sut = new RuleSixes();
+		
+		int []dice = {1,6,6,4,6};
+		assertEquals(18, sut.getScore(dice));
+	}
 
 }
