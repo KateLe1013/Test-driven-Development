@@ -2,10 +2,12 @@ package resource.model.rules;
 
 public class RuleSmallStraight implements IRule {
 
+	private String description;
+
 	@Override
 	public String getDescription() {
-		
-		return "Small Straight";
+		description="Small Straight";
+		return description;
 	}
 
 	@Override
