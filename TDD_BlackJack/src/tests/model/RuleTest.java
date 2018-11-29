@@ -11,6 +11,7 @@ import resource.model.rules.RuleAces;
 import resource.model.rules.RuleFives;
 import resource.model.rules.RuleFourOfAKind;
 import resource.model.rules.RuleFours;
+import resource.model.rules.RuleFullHouse;
 import resource.model.rules.RuleSixes;
 import resource.model.rules.RuleThreeOfAKind;
 import resource.model.rules.RuleThrees;
@@ -137,6 +138,12 @@ class RuleTest {
 		
 		int []dice = {1,6,6,6,6};
 		assertEquals(25, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleFullHouseDescription() {
+		sut = new RuleFullHouse();
+		assertEquals("Full House", sut.getDescription());
 	}
 
 }
