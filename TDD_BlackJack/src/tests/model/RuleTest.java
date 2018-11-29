@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import resource.model.rules.IRule;
 import resource.model.rules.RuleAces;
 import resource.model.rules.RuleFives;
+import resource.model.rules.RuleFourOfAKind;
 import resource.model.rules.RuleFours;
 import resource.model.rules.RuleSixes;
 import resource.model.rules.RuleThreeOfAKind;
@@ -122,6 +123,12 @@ class RuleTest {
 		
 		int []dice = {1,6,6,4,6};
 		assertEquals(23, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleFourOfAKindDescription() {
+		sut = new RuleFourOfAKind();
+		assertEquals("Four Of A Kind", sut.getDescription());
 	}
 
 }
