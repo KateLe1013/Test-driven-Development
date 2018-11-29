@@ -85,4 +85,13 @@ class RuleTest {
 		sut = new RuleFives();
 		assertEquals("Fives", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleFivesScores() {
+		sut = new RuleFives();
+		
+		int []dice = {4,2,5,4,4};
+		assertEquals(5, sut.getScore(dice));
+	}
+
 }
