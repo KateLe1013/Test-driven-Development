@@ -70,5 +70,13 @@ class RuleTest {
 		sut = new RuleFours();
 		assertEquals("Fours", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleFourssScores() {
+		sut = new RuleFours();
+		
+		int []dice = {4,2,5,4,4};
+		assertEquals(12, sut.getScore(dice));
+	}
 
 }
