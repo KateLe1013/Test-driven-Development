@@ -11,6 +11,7 @@ import resource.model.rules.RuleAces;
 import resource.model.rules.RuleFives;
 import resource.model.rules.RuleFours;
 import resource.model.rules.RuleSixes;
+import resource.model.rules.RuleThreeOfAKind;
 import resource.model.rules.RuleThrees;
 import resource.model.rules.RuleTwos;
 
@@ -107,6 +108,12 @@ class RuleTest {
 		
 		int []dice = {1,6,6,4,6};
 		assertEquals(18, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleThreeOfAKindDescription() {
+		sut = new RuleThreeOfAKind();
+		assertEquals("Three Of A Kind", sut.getDescription());
 	}
 
 }
