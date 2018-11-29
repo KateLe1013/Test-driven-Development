@@ -5,7 +5,7 @@ public class RuleSixes implements IRule {
 	@Override
 	public String getDescription() {
 		
-		return null;
+		return "Sixes";
 	}
 
 	@Override
