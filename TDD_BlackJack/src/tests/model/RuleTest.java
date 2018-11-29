@@ -115,5 +115,13 @@ class RuleTest {
 		sut = new RuleThreeOfAKind();
 		assertEquals("Three Of A Kind", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleThreeOfAKindScores() {
+		sut = new RuleThreeOfAKind();
+		
+		int []dice = {1,6,6,4,6};
+		assertEquals(23, sut.getScore(dice));
+	}
 
 }
