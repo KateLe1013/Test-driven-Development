@@ -5,7 +5,7 @@ public class RuleSmallStraight implements IRule {
 	@Override
 	public String getDescription() {
 		
-		return null;
+		return "Small Straight";
 	}
 
 	@Override
