@@ -2,6 +2,7 @@ package resource.model.rules;
 
 public class RuleSixes implements IRule {
 	private String description;
+	private int score;
 	
 	@Override
 	public String getDescription() {
@@ -11,8 +12,13 @@ public class RuleSixes implements IRule {
 
 	@Override
 	public int getScore(int[] dice) {
-		
-		return 18;
+		for (int d : dice) {
+			if (d == 6) {
+				score += 6;
+			}
+		}
+		return score;
+	
 	}
 
 }
