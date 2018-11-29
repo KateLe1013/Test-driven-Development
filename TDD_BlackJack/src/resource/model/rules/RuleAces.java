@@ -13,6 +13,6 @@ public class RuleAces implements IRule {
 	@Override
 	public int getScore(int[] dice) {
 
-		return 0;
+		return 5;
 	}
 }
