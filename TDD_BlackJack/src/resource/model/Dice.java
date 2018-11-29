@@ -29,6 +29,6 @@ public class Dice {
 	}
 
 	public boolean unselect() {
-		return false;
+		return true;
 	}
 }
