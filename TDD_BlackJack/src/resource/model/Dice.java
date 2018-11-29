@@ -2,7 +2,6 @@ package resource.model;
 
 import java.util.Random;
 
-
 public class Dice {
 
 	private int value;
@@ -27,5 +26,9 @@ public class Dice {
 
 	public void select() {
 		selected=true;
+	}
+
+	public boolean unselect() {
+		return false;
 	}
 }
