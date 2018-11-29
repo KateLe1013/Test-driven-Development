@@ -10,6 +10,7 @@ import resource.model.rules.IRule;
 import resource.model.rules.RuleAces;
 import resource.model.rules.RuleFives;
 import resource.model.rules.RuleFours;
+import resource.model.rules.RuleSixes;
 import resource.model.rules.RuleThrees;
 import resource.model.rules.RuleTwos;
 
@@ -92,6 +93,12 @@ class RuleTest {
 		
 		int []dice = {4,2,5,4,4};
 		assertEquals(5, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleSixesDescription() {
+		sut = new RuleSixes();
+		assertEquals("Sixes", sut.getDescription());
 	}
 
 }
