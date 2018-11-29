@@ -28,7 +28,7 @@ public class Dice {
 		selected=true;
 	}
 
-	public boolean unselect() {
-		return true;
+	public void unselect() {
+		selected=false;
 	}
 }
