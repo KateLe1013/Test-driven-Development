@@ -9,4 +9,10 @@ public class RuleAces implements IRule {
 		description = "Aces";
 		return description;
 	}
+
+	@Override
+	public int getScore(int[] dice) {
+
+		return 0;
+	}
 }

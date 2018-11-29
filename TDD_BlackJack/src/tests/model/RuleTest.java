@@ -25,5 +25,13 @@ class RuleTest {
 		sut = new RuleAces();
 		assertEquals("Aces", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleAcesScores() {
+		sut = new RuleAces();
+		
+		int []dice = {1,1,1,1,1};
+		assertEquals(5, sut.getScore(dice));
+	}
 
 }
