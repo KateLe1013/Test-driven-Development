@@ -55,5 +55,13 @@ class RuleTest {
 		sut = new RuleThrees();
 		assertEquals("Threes", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleThreesScores() {
+		sut = new RuleThrees();
+		
+		int []dice = {1,2,3,4,3};
+		assertEquals(6, sut.getScore(dice));
+	}
 
 }
