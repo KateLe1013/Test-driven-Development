@@ -40,5 +40,13 @@ class RuleTest {
 		sut = new RuleTwos();
 		assertEquals("Twos", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleTwosScores() {
+		sut = new RuleTwos();
+		
+		int []dice = {1,2,1,2,1};
+		assertEquals(4, sut.getScore(dice));
+	}
 
 }
