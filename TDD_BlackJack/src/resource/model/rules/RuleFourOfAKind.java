@@ -4,7 +4,7 @@ public class RuleFourOfAKind implements IRule {
 
 	@Override
 	public String getDescription() {
-		return null;
+		return "Four Of A Kind";
 	}
 
 	@Override
