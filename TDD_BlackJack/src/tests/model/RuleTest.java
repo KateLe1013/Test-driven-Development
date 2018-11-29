@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import resource.model.rules.IRule;
 import resource.model.rules.RuleAces;
+import resource.model.rules.RuleFours;
 import resource.model.rules.RuleThrees;
 import resource.model.rules.RuleTwos;
 
@@ -62,6 +63,12 @@ class RuleTest {
 		
 		int []dice = {1,2,3,4,3};
 		assertEquals(6, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleFoursDescription() {
+		sut = new RuleFours();
+		assertEquals("Fours", sut.getDescription());
 	}
 
 }
