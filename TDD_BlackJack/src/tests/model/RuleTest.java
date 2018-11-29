@@ -130,5 +130,13 @@ class RuleTest {
 		sut = new RuleFourOfAKind();
 		assertEquals("Four Of A Kind", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleFourOfAKindScores() {
+		sut = new RuleFourOfAKind();
+		
+		int []dice = {1,6,6,6,6};
+		assertEquals(25, sut.getScore(dice));
+	}
 
 }
