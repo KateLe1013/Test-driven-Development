@@ -2,6 +2,7 @@ package resource.model.rules;
 
 public class RuleFourOfAKind implements IRule {
 	private String description;
+	private int score;
 
 	@Override
 	public String getDescription() {
@@ -11,7 +12,10 @@ public class RuleFourOfAKind implements IRule {
 
 	@Override
 	public int getScore(int[] dice) {
-		return 25;
+		for (int d : dice) {
+			score+=d;
+		}
+		return score;
 	}
 
 }
