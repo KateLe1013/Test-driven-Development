@@ -2,9 +2,12 @@ package resource.model.rules;
 
 public class RuleThreeOfAKind implements IRule {
 
+	private String description;
+
 	@Override
 	public String getDescription() {
-		return "Three Of A Kind";
+		description="Three Of A Kind";
+		return description;
 	}
 
 	@Override
