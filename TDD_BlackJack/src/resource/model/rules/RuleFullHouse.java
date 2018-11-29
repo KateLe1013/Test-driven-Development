@@ -4,13 +4,13 @@ public class RuleFullHouse implements IRule {
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return "Full House";
 	}
 
 	@Override
 	public int getScore(int[] dice) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
