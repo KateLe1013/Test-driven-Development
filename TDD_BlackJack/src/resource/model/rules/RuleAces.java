@@ -4,6 +4,6 @@ public class RuleAces implements IRule {
 
 	@Override
 	public String getDescription() {
-		return null;
+		return "Aces";
 	}
 }
