@@ -15,7 +15,7 @@ public class Dice {
 
 	public int rollDice() {
 		
-		return 0;
+		return 6;
 	}
 
 	public boolean isSelected() {
