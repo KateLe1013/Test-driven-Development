@@ -145,5 +145,13 @@ class RuleTest {
 		sut = new RuleFullHouse();
 		assertEquals("Full House", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleFullHouseScores() {
+		sut = new RuleFullHouse();
+		
+		int []dice = {1,1,6,6,6};
+		assertEquals(25, sut.getScore(dice));
+	}
 
 }
