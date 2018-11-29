@@ -39,7 +39,8 @@ class DiceTest {
 	
 	@Test
 	void shouldTestSelect() {
-		assertTrue(sut.select());
+		sut.select();
+		assertTrue(sut.isSelected());
 	}
 
 	private void checkRandomNumberRange(int value) {

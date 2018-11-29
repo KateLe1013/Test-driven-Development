@@ -9,7 +9,6 @@ public class Dice {
 	private boolean selected = true;
 
 	public int getValue() {
-		// TODO Auto-generated method stub
 		return value;
 	}
 
@@ -26,7 +25,7 @@ public class Dice {
 		return selected;
 	}
 
-	public boolean select() {
-		return true;
+	public void select() {
+		selected=true;
 	}
 }
