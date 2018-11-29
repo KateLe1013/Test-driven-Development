@@ -1,5 +1,7 @@
 package resource.model;
 
+import java.util.Random;
+
 public class Dice {
 
 	private int value;
@@ -13,9 +15,9 @@ public class Dice {
 		value = i;
 	}
 
-	public int rollDice() {
-		
-		return 6;
+	public int rollDice(Random r) {
+		value = r.nextInt(6) + 1;
+		return value;
 	}
 
 	public boolean isSelected() {
@@ -23,10 +25,10 @@ public class Dice {
 	}
 
 	public void select() {
-		selected=true;
+		selected = true;
 	}
 
 	public void unselect() {
-		selected=false;
+		selected = false;
 	}
 }

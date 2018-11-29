@@ -19,7 +19,7 @@ class DiceTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		sut = new Dice();
-		r=mock(Random.class);
+		r = mock(Random.class);
 	}
 
 	@AfterEach
@@ -34,20 +34,22 @@ class DiceTest {
 
 	@Test
 	void shouldHaveRandomValues() {
-	assertEquals(6, sut.rollDice());
+		when(r.nextInt(6)).thenReturn(5);
+		assertEquals(6, sut.rollDice(r));
+		verify(r, times(1)).nextInt(6);
 	}
-	
+
 	@Test
 	void shouldTestIsSelected() {
 		assertTrue(sut.isSelected());
 	}
-	
+
 	@Test
 	void shouldTestSelect() {
 		sut.select();
 		assertTrue(sut.isSelected());
 	}
-	
+
 	@Test
 	void shouldTestUnSelect() {
 		sut.unselect();
