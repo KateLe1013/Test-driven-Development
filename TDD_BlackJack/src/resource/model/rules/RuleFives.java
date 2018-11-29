@@ -1,11 +1,12 @@
 package resource.model.rules;
 
 public class RuleFives implements IRule {
-
+	private String description;
+	
 	@Override
 	public String getDescription() {
-		
-		return "Fives";
+		description="Fives";
+		return description;
 	}
 
 	@Override
