@@ -2,19 +2,24 @@ package tests.model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Random;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.*;
 
 import resource.model.Dice;
 
 class DiceTest {
 
 	private Dice sut;
+	private Random r;
 
 	@BeforeEach
 	void setUp() throws Exception {
 		sut = new Dice();
+		r=mock(Random.class);
 	}
 
 	@AfterEach
@@ -29,7 +34,7 @@ class DiceTest {
 
 	@Test
 	void shouldHaveRandomValues() {
-		checkRandomNumberRange(sut.rollDice());
+	assertEquals(6, sut.rollDice());
 	}
 	
 	@Test
@@ -48,18 +53,4 @@ class DiceTest {
 		sut.unselect();
 		assertEquals(false, sut.isSelected());
 	}
-
-	private void checkRandomNumberRange(int value) {
-		int low = 1;
-		int high = 6;
-
-		if (value < low) {
-			fail("Value of the dice is lower than 1.");
-		}
-
-		if (value > high) {
-			fail("Value of the dice is higher than 6.");
-		}
-	}
-
 }
