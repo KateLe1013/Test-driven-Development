@@ -32,7 +32,8 @@ class ViewTest {
 	
 	@Test
 	void shouldReturnExit() {
-		assertEquals("Welcome back!", sut.showExit());
+		sut.showExit();
+		verify(c).writeLine(View.EXIT);
 	}
 
 }

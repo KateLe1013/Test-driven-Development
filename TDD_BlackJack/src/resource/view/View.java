@@ -2,6 +2,7 @@ package resource.view;
 
 public class View {
 	public static final String WELCOME = "Welcome to Yahtzee";
+	public static final String EXIT = "Welcome back!";
 	private Console console;
 
 	public View(Console c) {
@@ -12,9 +13,8 @@ public class View {
 		console.writeLine(WELCOME);
 	}
 
-	public String showExit() {
-		
-		return "Welcome back!";
+	public void showExit() {
+		console.writeLine(EXIT);
 	}
 
 }
