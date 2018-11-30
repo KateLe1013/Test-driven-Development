@@ -191,4 +191,11 @@ class RuleTest {
 		assertEquals("Yahtzee", sut.getDescription());
 	}
 
+	@Test
+	void testRuleYahtzeeScores() {
+		sut = new RuleYahtzee();
+		
+		int []dice = {5,5,5,5,5};
+		assertEquals(50, sut.getScore(dice));
+	}
 }
