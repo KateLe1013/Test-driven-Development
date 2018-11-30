@@ -5,7 +5,7 @@ public class RuleYahtzee implements IRule {
 	@Override
 	public String getDescription() {
 		
-		return null;
+		return "Yahtzee";
 	}
 
 	@Override
