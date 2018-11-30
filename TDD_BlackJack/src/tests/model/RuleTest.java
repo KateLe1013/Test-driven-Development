@@ -175,5 +175,13 @@ class RuleTest {
 		sut = new RuleLargeStraight();
 		assertEquals("Large Straight", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleLargeStraightScores() {
+		sut = new RuleLargeStraight();
+		
+		int []dice = {1,2,3,4,5};
+		assertEquals(40, sut.getScore(dice));
+	}
 
 }
