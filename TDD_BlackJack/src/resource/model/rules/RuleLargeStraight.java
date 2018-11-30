@@ -3,6 +3,7 @@ package resource.model.rules;
 public class RuleLargeStraight implements IRule {
 
 	private String description;
+	private int score;
 
 	@Override
 	public String getDescription() {
@@ -12,8 +13,8 @@ public class RuleLargeStraight implements IRule {
 
 	@Override
 	public int getScore(int[] dice) {
-
-		return 40;
+		score = 40;
+		return score;
 	}
 
 }
