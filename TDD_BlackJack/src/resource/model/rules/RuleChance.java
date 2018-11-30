@@ -2,10 +2,12 @@ package resource.model.rules;
 
 public class RuleChance implements IRule {
 
+	private String description;
+
 	@Override
 	public String getDescription() {
-	
-		return "Chance";
+		description="Chance";
+		return description;
 	}
 
 	@Override
