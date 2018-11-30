@@ -60,6 +60,7 @@ class TotalScoreTest {
 		assertEquals(100, sut.getBonus());
 		verify(r,times(1)).getDescription();
 		verify(r,times(1)).getScore(dice);
+		
 	}
 	
 	@Test

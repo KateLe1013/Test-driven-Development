@@ -17,16 +17,15 @@ public class TotalScore {
 		if (rule.equals("Aces") || rule.equals("Twos") || rule.equals("Threes") || rule.equals("Fours")
 				|| rule.equals("Fives") || rule.equals("Sixes")) {
 			totalUpperSectionScore += score;
-		} else {
-			totalScore += score;
 		}
+			totalScore += score;	
 		return score;
 	}
 
 	public int getBonus() {
 		if (totalUpperSectionScore >= 63) {
-			totalScore += totalUpperSectionScore + BONUS;
+			return totalScore+BONUS;
 		}
-		return 60;
+		return totalScore;
 	}
 }
