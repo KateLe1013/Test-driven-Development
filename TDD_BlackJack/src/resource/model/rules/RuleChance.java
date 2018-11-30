@@ -5,7 +5,7 @@ public class RuleChance implements IRule {
 	@Override
 	public String getDescription() {
 	
-		return null;
+		return "Chance";
 	}
 
 	@Override
