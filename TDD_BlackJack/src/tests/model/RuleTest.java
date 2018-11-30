@@ -12,6 +12,7 @@ import resource.model.rules.RuleFives;
 import resource.model.rules.RuleFourOfAKind;
 import resource.model.rules.RuleFours;
 import resource.model.rules.RuleFullHouse;
+import resource.model.rules.RuleLargeStraight;
 import resource.model.rules.RuleSixes;
 import resource.model.rules.RuleSmallStraight;
 import resource.model.rules.RuleThreeOfAKind;
@@ -167,6 +168,12 @@ class RuleTest {
 		
 		int []dice = {1,2,3,4,6};
 		assertEquals(30, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleLargeStraightDescription() {
+		sut = new RuleLargeStraight();
+		assertEquals("Large Straight", sut.getDescription());
 	}
 
 }
