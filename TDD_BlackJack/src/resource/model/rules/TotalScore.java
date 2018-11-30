@@ -23,6 +23,6 @@ public class TotalScore {
 	}
 	
 	public int getBonus(){
-		return 0;
+		return 100;
 	}
 }
