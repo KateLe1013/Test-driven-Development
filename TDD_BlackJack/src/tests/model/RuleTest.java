@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import resource.model.rules.IRule;
 import resource.model.rules.RuleAces;
+import resource.model.rules.RuleChance;
 import resource.model.rules.RuleFives;
 import resource.model.rules.RuleFourOfAKind;
 import resource.model.rules.RuleFours;
@@ -197,5 +198,11 @@ class RuleTest {
 		
 		int []dice = {5,5,5,5,5};
 		assertEquals(50, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleChanceDescription() {
+		sut = new RuleChance();
+		assertEquals("Chance", sut.getDescription());
 	}
 }
