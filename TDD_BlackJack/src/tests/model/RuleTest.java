@@ -18,6 +18,7 @@ import resource.model.rules.RuleSmallStraight;
 import resource.model.rules.RuleThreeOfAKind;
 import resource.model.rules.RuleThrees;
 import resource.model.rules.RuleTwos;
+import resource.model.rules.RuleYahtzee;
 
 class RuleTest {
 	private IRule sut;
@@ -182,6 +183,12 @@ class RuleTest {
 		
 		int []dice = {1,2,3,4,5};
 		assertEquals(40, sut.getScore(dice));
+	}
+	
+	@Test
+	void testRuleYahtzeeDescription() {
+		sut = new RuleYahtzee();
+		assertEquals("Yahtzee", sut.getDescription());
 	}
 
 }
