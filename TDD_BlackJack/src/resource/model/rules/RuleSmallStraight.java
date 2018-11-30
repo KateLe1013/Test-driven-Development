@@ -3,17 +3,18 @@ package resource.model.rules;
 public class RuleSmallStraight implements IRule {
 
 	private String description;
+	private int score;
 
 	@Override
 	public String getDescription() {
-		description="Small Straight";
+		description = "Small Straight";
 		return description;
 	}
 
 	@Override
 	public int getScore(int[] dice) {
-		
-		return 30;
+		score = 30;
+		return score;
 	}
 
 }
