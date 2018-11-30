@@ -25,7 +25,7 @@ public class TotalScore {
 
 	public int getBonus() {
 		if (totalUpperSectionScore >= 63) {
-			totalScore = totalUpperSectionScore + BONUS;
+			totalScore += totalUpperSectionScore + BONUS;
 		}
 		return totalScore;
 	}

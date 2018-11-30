@@ -61,5 +61,18 @@ class TotalScoreTest {
 		verify(r,times(1)).getDescription();
 		verify(r,times(1)).getScore(dice);
 	}
+	
+	@Test
+	void shouldReturnTotalScoreWhenTotalUpperSectionScoreLessThan63() {
+		r=mock(RuleTwos.class);
+		int []dice= {1,2,3,2,2};
+		when(r.getDescription()).thenReturn(RuleTwos.class.getSimpleName().substring(4));
+		when(r.getScore(dice)).thenReturn(60);
+		sut=new TotalScore(r,dice);
+		sut.getTotalUpperSectionScore();
+		assertEquals(60, sut.getBonus());
+		verify(r,times(1)).getDescription();
+		verify(r,times(1)).getScore(dice);
+	}
 
 }
