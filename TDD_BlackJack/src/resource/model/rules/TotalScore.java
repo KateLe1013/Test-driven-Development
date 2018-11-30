@@ -21,4 +21,8 @@ public class TotalScore {
 		}
 		return score;
 	}
+	
+	public int getBonus(){
+		return 0;
+	}
 }
