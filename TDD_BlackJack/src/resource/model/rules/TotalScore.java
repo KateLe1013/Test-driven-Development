@@ -6,7 +6,7 @@ public class TotalScore {
 	private int score;
 	private int totalUpperSectionScore;
 	private int totalScore;
-	
+	private final int BONUS = 35;
 
 	public TotalScore(IRule r, int[] dice) {
 		rule = r.getDescription();
@@ -14,15 +14,19 @@ public class TotalScore {
 	}
 
 	public int getTotalUpperSectionScore() {
-		if (rule.equals("Aces") || rule.equals("Twos") || rule.equals("Threes") || rule.equals("Fours") || rule.equals("Fives") || rule.equals("Sixes")) {
+		if (rule.equals("Aces") || rule.equals("Twos") || rule.equals("Threes") || rule.equals("Fours")
+				|| rule.equals("Fives") || rule.equals("Sixes")) {
 			totalUpperSectionScore += score;
 		} else {
-			totalScore +=score;
+			totalScore += score;
 		}
 		return score;
 	}
-	
-	public int getBonus(){
-		return 100;
+
+	public int getBonus() {
+		if (totalUpperSectionScore >= 63) {
+			totalScore = totalUpperSectionScore + BONUS;
+		}
+		return totalScore;
 	}
 }
