@@ -205,4 +205,12 @@ class RuleTest {
 		sut = new RuleChance();
 		assertEquals("Chance", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleChanceScores() {
+		sut = new RuleChance();
+		
+		int []dice = {1,5,4,3,6};
+		assertEquals(19, sut.getScore(dice));
+	}
 }
