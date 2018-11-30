@@ -8,7 +8,7 @@ public class View {
 	}
 
 	public String showWelcome() {
-		return null;
+		return "Welcome to Yahtzee";
 	}
 
 }
