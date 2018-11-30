@@ -26,7 +26,13 @@ class ViewTest {
 
 	@Test
 	void shouldReturnWelcome() {
-		assertEquals("Welcome to Yahtzee", sut.showWelcome());
+		sut.showWelcome();
+		verify(c).writeLine(View.WELCOME);
+	}
+	
+	@Test
+	void shouldReturnExit() {
+		assertEquals("Welcome back!", sut.showExit());
 	}
 
 }
