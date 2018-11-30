@@ -160,5 +160,13 @@ class RuleTest {
 		sut = new RuleSmallStraight();
 		assertEquals("Small Straight", sut.getDescription());
 	}
+	
+	@Test
+	void testRuleSmallStraightScores() {
+		sut = new RuleSmallStraight();
+		
+		int []dice = {1,2,3,4,6};
+		assertEquals(30, sut.getScore(dice));
+	}
 
 }
