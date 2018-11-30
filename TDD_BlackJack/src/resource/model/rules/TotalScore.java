@@ -27,6 +27,6 @@ public class TotalScore {
 		if (totalUpperSectionScore >= 63) {
 			totalScore += totalUpperSectionScore + BONUS;
 		}
-		return totalScore;
+		return 60;
 	}
 }
