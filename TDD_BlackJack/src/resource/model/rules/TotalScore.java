@@ -19,6 +19,6 @@ public class TotalScore {
 		} else {
 			totalScore +=score;
 		}
-		return 12;
+		return score;
 	}
 }
