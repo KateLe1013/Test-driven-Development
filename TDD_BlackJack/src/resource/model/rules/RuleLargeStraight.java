@@ -5,7 +5,7 @@ public class RuleLargeStraight implements IRule {
 	@Override
 	public String getDescription() {
 		
-		return null;
+		return "Large Straight";
 	}
 
 	@Override
