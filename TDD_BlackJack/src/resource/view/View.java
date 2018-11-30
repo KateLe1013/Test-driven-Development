@@ -14,7 +14,7 @@ public class View {
 
 	public String showExit() {
 		
-		return null;
+		return "Welcome back!";
 	}
 
 }
