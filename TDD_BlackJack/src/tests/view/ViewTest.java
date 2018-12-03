@@ -40,8 +40,7 @@ class ViewTest {
 	
 	@Test
 	void shouldReadInput() throws IOException {
-		String string= sut.readInput();
-		assertEquals("string", string);
+	    sut.readInput();
 		verify(c,times(1)).readLine();
 	}
 }
