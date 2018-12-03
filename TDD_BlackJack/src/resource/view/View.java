@@ -26,7 +26,7 @@ public class View {
 	}
 
 	public boolean quit() {
-		return false;
+		return true;
 	}
 
 }
