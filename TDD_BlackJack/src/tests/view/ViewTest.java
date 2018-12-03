@@ -62,7 +62,7 @@ class ViewTest {
 	
 	@Test
 	void shouldNotRoll() throws IOException {
-		when(c.readLine()).thenReturn(View.ROLL);
+		when(c.readLine()).thenReturn(View.QUIT);
 		sut.readInput();
 		boolean actual = sut.roll();
 		assertFalse(actual);
