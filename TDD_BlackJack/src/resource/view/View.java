@@ -17,4 +17,8 @@ public class View {
 		console.writeLine(EXIT);
 	}
 
+	public String readInput() {
+		return null;
+	}
+
 }

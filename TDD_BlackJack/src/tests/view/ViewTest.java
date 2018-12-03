@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
+import java.io.IOException;
+
 import resource.view.Console;
 import resource.view.View;
 
@@ -35,5 +37,11 @@ class ViewTest {
 		sut.showExit();
 		verify(c).writeLine(View.EXIT);
 	}
-
+	
+	@Test
+	void shouldReadInput() throws IOException {
+		String string= sut.readInput();
+		assertEquals("string", string);
+		verify(c,times(1)).readLine();
+	}
 }
