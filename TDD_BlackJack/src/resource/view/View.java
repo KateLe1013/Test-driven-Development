@@ -46,7 +46,7 @@ public class View {
 	}
 	
 	public int readInputInt() {
-		return 0;
+		return 1;
 		
 	}
 }
