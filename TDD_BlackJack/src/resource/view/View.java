@@ -34,7 +34,7 @@ public class View {
 	}
 
 	public boolean roll() {
-		return false;
+		return true;
 	}
 
 }
