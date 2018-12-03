@@ -70,7 +70,7 @@ class ViewTest {
 	
 	@Test
 	void shouldNotQuit() throws IOException {
-		when(c.readLine()).thenReturn(View.QUIT);
+		when(c.readLine()).thenReturn(View.ROLL);
 		sut.readInput();
 		boolean actual = sut.quit();
 		assertFalse(actual);

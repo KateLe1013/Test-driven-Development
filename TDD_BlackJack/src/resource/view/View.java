@@ -27,9 +27,9 @@ public class View {
 	}
 
 	public boolean quit() {
-//		if (input.startsWith(QUIT)) {
-//			return true;
-//		}
+		if (input.startsWith(QUIT)) {
+			return true;
+		}
 		return false;
 	}
 
