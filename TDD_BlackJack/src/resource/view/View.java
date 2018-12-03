@@ -30,8 +30,7 @@ public class View {
 //		if (input.startsWith(QUIT)) {
 //			return true;
 //		}
-//		return false;
-		return true;
+		return false;
 	}
 
 	public boolean roll() {
