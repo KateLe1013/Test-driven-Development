@@ -27,10 +27,11 @@ public class View {
 	}
 
 	public boolean quit() {
-		if (input.startsWith(QUIT)) {
-			return true;
-		}
-		return false;
+//		if (input.startsWith(QUIT)) {
+//			return true;
+//		}
+//		return false;
+		return true;
 	}
 
 	public boolean roll() {

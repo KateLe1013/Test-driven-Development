@@ -67,4 +67,12 @@ class ViewTest {
 		boolean actual = sut.roll();
 		assertFalse(actual);
 	}
+	
+	@Test
+	void shouldNotQuit() throws IOException {
+		when(c.readLine()).thenReturn(View.QUIT);
+		sut.readInput();
+		boolean actual = sut.quit();
+		assertFalse(actual);
+	}
 }
