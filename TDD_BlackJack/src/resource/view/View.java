@@ -43,6 +43,7 @@ public class View {
 	}
 
 	public String showDice(int[] dice) {
-		return null;
+		return "Dice1: " + dice[0] + ", Dice2: " + dice[1] + ", Dice3: " + dice[2] + ", Dice4: " + dice[3]
+				+ ", Dice5: " + dice[4] + " ";
 	}
 }
