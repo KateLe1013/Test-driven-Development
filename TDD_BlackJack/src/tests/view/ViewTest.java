@@ -83,8 +83,9 @@ class ViewTest {
 	}
 
 	private void showDiceArray(int [] dice) {
-		assertEquals("Dice1: " + dice[0] + ", Dice2: " + dice[1] + ", Dice3: " + dice[2] + ", Dice4: " + dice[3]
-				+ ", Dice5: " + dice[4] + " ",sut.showDice(dice));
+		sut.showDice(dice);
+		verify(c).writeLine("Dice1: " + dice[0] + ", Dice2: " + dice[1] + ", Dice3: " + dice[2] + ", Dice4: " + dice[3]
+				+ ", Dice5: " + dice[4] + "");
 	}
 
 }
