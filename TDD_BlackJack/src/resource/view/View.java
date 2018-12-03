@@ -6,6 +6,7 @@ public class View {
 	public static final String WELCOME = "Welcome to Yahtzee";
 	public static final String EXIT = "Welcome back!";
 	public static String QUIT = "Q";
+	public static String ROLL = "R";
 	private Console console;
 	public String input;
 
@@ -29,6 +30,10 @@ public class View {
 		if (input.startsWith(QUIT)) {
 			return true;
 		}
+		return false;
+	}
+
+	public boolean roll() {
 		return false;
 	}
 
