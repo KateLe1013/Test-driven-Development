@@ -5,6 +5,7 @@ import java.io.IOException;
 public class View {
 	public static final String WELCOME = "Welcome to Yahtzee";
 	public static final String EXIT = "Welcome back!";
+	public static String QUIT = "Q";
 	private Console console;
 	public String input;
 
@@ -22,6 +23,10 @@ public class View {
 
 	public void readInput() throws IOException {
 		input = console.readLine();
+	}
+
+	public boolean quit() {
+		return false;
 	}
 
 }

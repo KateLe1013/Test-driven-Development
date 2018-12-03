@@ -43,4 +43,12 @@ class ViewTest {
 	    sut.readInput();
 		verify(c,times(1)).readLine();
 	}
+	
+	@Test
+	void shouldQuit() throws IOException {
+		when(c.readLine()).thenReturn(View.QUIT);
+		sut.readInput();
+		boolean actual = sut.quit();
+		assertTrue(actual);
+	}
 }
