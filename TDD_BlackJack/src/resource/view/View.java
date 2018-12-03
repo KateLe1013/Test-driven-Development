@@ -37,8 +37,7 @@ public class View {
 //		if (input.startsWith(ROLL)) {
 //			return true;
 //		}
-//		return false;
-		return true;
+		return false;
 	}
 
 }
