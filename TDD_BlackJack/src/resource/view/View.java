@@ -2,6 +2,8 @@ package resource.view;
 
 import java.io.IOException;
 
+import resource.model.Dice;
+
 public class View {
 	public static final String WELCOME = "Welcome to Yahtzee";
 	public static final String EXIT = "Welcome back!";
@@ -40,4 +42,7 @@ public class View {
 		return false;
 	}
 
+	public String showDice(int[] dice) {
+		return null;
+	}
 }
