@@ -34,7 +34,10 @@ public class View {
 	}
 
 	public boolean roll() {
-		return true;
+		if (input.startsWith(ROLL)) {
+			return true;
+		}
+		return false;
 	}
 
 }
