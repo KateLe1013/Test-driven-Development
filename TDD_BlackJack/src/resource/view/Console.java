@@ -19,4 +19,14 @@ public class Console {
 	public void writeLine(String string) {
 		System.out.println(string);
 	}
+	
+	public int inputInt() {
+	int result = 0;
+	    try {
+	      result = Integer.parseInt(readLine().trim());
+	    } catch (Exception e) {
+	      result = 0;
+	    }
+	    return result;
+	}
 }

@@ -9,7 +9,7 @@ public class View {
 	public static String ROLL = "R";
 	private Console console;
 	public String input;
-
+	
 	public View(Console c) {
 		console = c;
 	}
@@ -43,5 +43,10 @@ public class View {
 	public void showDice(int[] dice) {
 		console.writeLine("Dice1: " + dice[0] + ", Dice2: " + dice[1] + ", Dice3: " + dice[2] + ", Dice4: " + dice[3]
 				+ ", Dice5: " + dice[4] + "");
+	}
+	
+	public int readInputInt() {
+		return 0;
+		
 	}
 }
