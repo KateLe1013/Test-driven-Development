@@ -26,7 +26,10 @@ public class View {
 	}
 
 	public boolean quit() {
-		return true;
+		if (input.startsWith(QUIT)) {
+			return true;
+		}
+		return false;
 	}
 
 }
