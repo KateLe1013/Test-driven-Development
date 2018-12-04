@@ -1,6 +1,7 @@
 package resource.view;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import resource.model.rules.IRule;
 
@@ -60,5 +61,9 @@ public class WinningView {
 			System.out.println("13 - 6's");
 		}
 		choice = view.readInputInt("");
+	}
+
+	public int checkWinningScore(int[] dice) {
+	 return 0;
 	}
 }

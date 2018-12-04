@@ -39,5 +39,11 @@ class WinningViewTest {
 		sut.checkWinning(win,dice);
 		verify(v,times(1)).readInputInt("");
 	}
+	
+	@Test
+	void shouldTestCheckWinningScore() throws IOException {
+		int[] dice = {1,1,1,2,3};
+		assertEquals(3, sut.checkWinningScore(dice));
+	}
 
 }
