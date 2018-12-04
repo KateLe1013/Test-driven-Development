@@ -43,7 +43,7 @@ class WinningViewTest {
 	@Test
 	void shouldTestCheckWinningScore() throws IOException {
 		int[] dice = {1,1,1,2,3};
-		assertEquals(3, sut.checkWinningScore(dice));
+		assertEquals(3, sut.checkWinningScore(dice,8));
 	}
 
 }
