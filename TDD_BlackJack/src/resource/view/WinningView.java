@@ -144,6 +144,14 @@ public class WinningView {
 		choice = i;
 	}
 
+	public int getScore() {
+		return 0;
+	}
+
+	public void setScore(int i) {
+		totalScore = i;
+	}
+
 	private boolean isThreeOfAKind(int[] dice) {
 		int counter = 0;
 		int[] specifyCountTimes = new int[6];

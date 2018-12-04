@@ -48,4 +48,10 @@ class WinningViewTest {
 		sut.setChoice(1);
 		assertEquals(1, sut.getChoice());
 	}
+	
+	@Test
+	void shouldReturnScore() {
+		sut.setScore(50);
+		assertEquals(50, sut.getScore());
+	}
 }
