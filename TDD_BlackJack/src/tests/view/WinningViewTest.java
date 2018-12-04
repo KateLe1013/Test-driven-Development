@@ -35,7 +35,8 @@ class WinningViewTest {
 	@Test
 	void shouldTestCheckWinning() throws IOException {
 		int[] win = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		sut.checkWinningRule(win);
+		int[] dice = {1,1,1,2,3};
+		sut.checkWinning(win,dice);
 		verify(v,times(1)).readInputInt("");
 	}
 

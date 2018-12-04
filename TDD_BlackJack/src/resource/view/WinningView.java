@@ -13,8 +13,12 @@ public class WinningView {
 		rule = r;
 		view = v;
 	}
+	
+	public void checkWinning(int []win, int []dice) throws IOException {
+		checkWinningRule(win);
+	}
 
-	public void checkWinningRule(int[] win) throws IOException {
+	private void checkWinningRule(int[] win) throws IOException {
 		System.out.println("Which do you want to see if you have?");
 		if (win[0] == 0) {
 			System.out.println("1 - Yathzee");
