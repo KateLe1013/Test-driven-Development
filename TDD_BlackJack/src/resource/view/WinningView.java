@@ -145,7 +145,7 @@ public class WinningView {
 	}
 
 	public int getScore() {
-		return 0;
+		return 50;
 	}
 
 	public void setScore(int i) {
