@@ -137,7 +137,7 @@ public class WinningView {
 	}
 
 	public int getChoice() {
-		return 0;
+		return 1;
 	}
 
 	public void setChoice(int i) {
