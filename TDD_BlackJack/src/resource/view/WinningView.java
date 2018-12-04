@@ -17,22 +17,20 @@ import resource.model.rules.RuleThreeOfAKind;
 import resource.model.rules.RuleThrees;
 import resource.model.rules.RuleTwos;
 import resource.model.rules.RuleYahtzee;
-import resource.model.rules.TotalScore;
 
 public class WinningView {
 	private IRule rule;
 	private View view;
 	private int choice;
-	private TotalScore score;
 	private int totalScore;
 
-	public WinningView(IRule r, View v) {
-		rule = r;
+	public WinningView(View v) {
 		view = v;
 	}
 
 	public void checkWinning(int[] win, int[] dice) throws IOException {
 		checkWinningRule(win);
+		checkWinningScore(dice);
 	}
 
 	private void checkWinningRule(int[] win) throws IOException {
@@ -79,7 +77,7 @@ public class WinningView {
 		choice = view.readInputInt("");
 	}
 
-	public int checkWinningScore(int[] dice, int choice) {
+	private int checkWinningScore(int[] dice) {
 		Arrays.sort(dice);
 
 		if (isSmallStraight(dice)&&(choice == 4)) {
@@ -113,33 +111,27 @@ public class WinningView {
 		} else if(choice==8){
 			System.out.println("You have Aces!");
 			rule = new RuleAces();
-			score = new TotalScore(rule, dice);
-			totalScore = score.getTotalUpperSectionScore();
+			totalScore = rule.getScore(dice);
 		}else if(choice==9){
 			System.out.println("You have Twos!");
 			rule = new RuleTwos();
-			score = new TotalScore(rule, dice);
-			totalScore = score.getTotalUpperSectionScore();
+			totalScore = rule.getScore(dice);
 		}else if(choice==10){
 			System.out.println("You have Threes!");
 			rule = new RuleThrees();
-			score = new TotalScore(rule, dice);
-			totalScore = score.getTotalUpperSectionScore();
+			totalScore = rule.getScore(dice);
 		}else if(choice==11){
 			System.out.println("You have Fours!");
 			rule = new RuleFours();
-			score = new TotalScore(rule, dice);
-			totalScore = score.getTotalUpperSectionScore();
+			totalScore = rule.getScore(dice);
 		}else if(choice==12){
 			System.out.println("You have Fives!");
 			rule = new RuleFives();
-			score = new TotalScore(rule, dice);
-			totalScore = score.getTotalUpperSectionScore();
+			totalScore = rule.getScore(dice);
 		}else if(choice==13){
 			System.out.println("You have Sixes!");
 			rule = new RuleSixes();
-			score = new TotalScore(rule, dice);
-			totalScore = score.getTotalUpperSectionScore();
+			totalScore = rule.getScore(dice);
 		}
 		return totalScore;
 	}
