@@ -43,4 +43,9 @@ class WinningViewTest {
 	    verify(v,times(1)).readInputInt("");
 	}
 
+	@Test
+	void shouldReturnChoice() {
+		sut.setChoice(1);
+		assertEquals(1, sut.getChoice());
+	}
 }

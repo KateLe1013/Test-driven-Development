@@ -80,15 +80,15 @@ public class WinningView {
 	private int checkWinningScore(int[] dice) {
 		Arrays.sort(dice);
 
-		if (isSmallStraight(dice)&&(choice == 4)) {
+		if (isSmallStraight(dice) && (choice == 4)) {
 			System.out.println("You have Small Straight!");
 			rule = new RuleSmallStraight();
 			totalScore = rule.getScore(dice);
-		} else if (isLargeStraight(dice)&&(choice == 3)) {
+		} else if (isLargeStraight(dice) && (choice == 3)) {
 			System.out.println("You have Large Straight!");
 			rule = new RuleLargeStraight();
 			totalScore = rule.getScore(dice);
-		} else if (isFullHouse(dice)&&(choice == 2)) {
+		} else if (isFullHouse(dice) && (choice == 2)) {
 			System.out.println("You have Full House!");
 			rule = new RuleFullHouse();
 			totalScore = rule.getScore(dice);
@@ -96,44 +96,52 @@ public class WinningView {
 			System.out.println("Yahtzee!");
 			rule = new RuleYahtzee();
 			totalScore = rule.getScore(dice);
-		} else if (isFourOfAKind(dice)&&(choice == 5)) {
+		} else if (isFourOfAKind(dice) && (choice == 5)) {
 			System.out.println("You have Four Of A Kind!");
 			rule = new RuleFourOfAKind();
 			totalScore = rule.getScore(dice);
-		} else if (isThreeOfAKind(dice)&&(choice == 6)) {
+		} else if (isThreeOfAKind(dice) && (choice == 6)) {
 			System.out.println("You have Three Of A Kind!");
 			rule = new RuleThreeOfAKind();
 			totalScore = rule.getScore(dice);
-		}else if (choice == 7) {
+		} else if (choice == 7) {
 			System.out.println("Chance!");
 			rule = new RuleChance();
 			totalScore = rule.getScore(dice);
-		} else if(choice==8){
+		} else if (choice == 8) {
 			System.out.println("You have Aces!");
 			rule = new RuleAces();
 			totalScore = rule.getScore(dice);
-		}else if(choice==9){
+		} else if (choice == 9) {
 			System.out.println("You have Twos!");
 			rule = new RuleTwos();
 			totalScore = rule.getScore(dice);
-		}else if(choice==10){
+		} else if (choice == 10) {
 			System.out.println("You have Threes!");
 			rule = new RuleThrees();
 			totalScore = rule.getScore(dice);
-		}else if(choice==11){
+		} else if (choice == 11) {
 			System.out.println("You have Fours!");
 			rule = new RuleFours();
 			totalScore = rule.getScore(dice);
-		}else if(choice==12){
+		} else if (choice == 12) {
 			System.out.println("You have Fives!");
 			rule = new RuleFives();
 			totalScore = rule.getScore(dice);
-		}else if(choice==13){
+		} else if (choice == 13) {
 			System.out.println("You have Sixes!");
 			rule = new RuleSixes();
 			totalScore = rule.getScore(dice);
 		}
 		return totalScore;
+	}
+
+	public int getChoice() {
+		return 0;
+	}
+
+	public void setChoice(int i) {
+		choice = i;
 	}
 
 	private boolean isThreeOfAKind(int[] dice) {
