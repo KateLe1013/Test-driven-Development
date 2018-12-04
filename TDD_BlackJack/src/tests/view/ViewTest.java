@@ -90,7 +90,8 @@ class ViewTest {
 	
 	@Test
 	void shouldReadInputInt(){
-		assertEquals(1, sut.readInputInt());
+		sut.readInputInt("String");
+		verify(c,times(1)).inputInt("String");
 	}
 
 }

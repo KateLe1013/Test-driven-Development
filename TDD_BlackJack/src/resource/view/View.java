@@ -9,6 +9,7 @@ public class View {
 	public static String ROLL = "R";
 	private Console console;
 	public String input;
+	public int inputInt;
 	
 	public View(Console c) {
 		console = c;
@@ -45,8 +46,8 @@ public class View {
 				+ ", Dice5: " + dice[4] + "");
 	}
 	
-	public int readInputInt() {
-		return 1;
-		
+	public int readInputInt(String s) {
+		inputInt=console.inputInt(s);
+		return inputInt;
 	}
 }

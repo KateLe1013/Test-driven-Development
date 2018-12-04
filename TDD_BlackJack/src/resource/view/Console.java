@@ -20,13 +20,24 @@ public class Console {
 		System.out.println(string);
 	}
 	
-	public int inputInt() {
-	int result = 0;
-	    try {
-	      result = Integer.parseInt(readLine().trim());
-	    } catch (Exception e) {
-	      result = 0;
-	    }
-	    return result;
+	public int inputInt(String s) {
+		int result = 0;
+		    try {
+		      result = Integer.parseInt(input(s).trim());
+		    } catch (Exception e) {
+		      result = 0;
+		    }
+		    return result;
+		}
+		
+	public String input(String s) {
+		String inputLine = "";
+		System.out.print(s);
+		try {
+			inputLine = b.readLine();
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return inputLine;
 	}
 }
