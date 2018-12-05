@@ -24,11 +24,10 @@ public class Program {
 	public static void main(String[] args) throws IOException {
 		View view = new View(new Console());
 		Program game = new Program(new Dice(), view, new WinningView(view));
-		
 		game.play();
 	}
 
 	public void play() throws IOException {
-		fail("");
+		view.showWelcome();
 	}
 }
