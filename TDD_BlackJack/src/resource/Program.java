@@ -5,6 +5,8 @@ import static org.junit.Assert.fail;
 import java.io.IOException;
 import java.util.Random;
 
+import org.junit.jupiter.api.Test;
+
 import resource.model.Dice;
 import resource.view.Console;
 import resource.view.View;
@@ -29,5 +31,6 @@ public class Program {
 
 	public void play() throws IOException {
 		view.showWelcome();
+	    fail();
 	}
 }

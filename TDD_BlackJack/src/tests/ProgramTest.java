@@ -38,4 +38,9 @@ class ProgramTest {
 		verify(view).showWelcome();
 	}
 	
+	@Test
+	void shouldreadInput() throws IOException {
+		sut.play();
+		verify(view).readInput();
+	}
 }
