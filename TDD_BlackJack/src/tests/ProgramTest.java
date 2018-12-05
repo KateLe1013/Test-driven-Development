@@ -43,4 +43,12 @@ class ProgramTest {
 		sut.play();
 		verify(view).readInput();
 	}
+	
+	@Test
+	void shouldQuitAndShowExit() throws IOException {
+		when(view.quit()).thenReturn(true);
+		sut.play();
+		verify(view).quit();
+		verify(view).showExit();
+	}
 }
