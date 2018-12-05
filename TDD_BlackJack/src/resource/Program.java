@@ -31,7 +31,7 @@ public class Program {
 
 	public void play() throws IOException {
 		view.showWelcome();
-		
+		System.out.print("\nSelect 'R' to roll, 'Q' to quit: ");
 		view.readInput();
 	}
 }
