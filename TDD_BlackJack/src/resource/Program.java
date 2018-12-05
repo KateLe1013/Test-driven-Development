@@ -31,16 +31,15 @@ public class Program {
 
 	public void play() throws IOException {
 		view.showWelcome();
-		System.out.print("\nSelect 'R' to roll, 'Q' to quit: ");
-		view.readInput();
-		if(view.quit()) {
-			view.showExit();
-		}
 		
-		int[]dice ={1,1,1,2,3};
+		do{
+			System.out.print("\nSelect 'R' to roll, 'Q' to quit: ");
+		    view.readInput();
+			int[]dice ={1,1,1,2,3};
 		if(view.roll()) {
 			view.showDice(dice);
-			
 		}
+		}while(!view.quit());
+		view.showExit();
 	}
 }

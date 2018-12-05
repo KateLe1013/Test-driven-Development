@@ -34,12 +34,14 @@ class ProgramTest {
 
 	@Test
 	void shouldWelcome() throws IOException {
+		when(view.quit()).thenReturn(true);
 		sut.play();
 		verify(view).showWelcome();
 	}
 	
 	@Test
 	void shouldreadInput() throws IOException {
+		when(view.quit()).thenReturn(true);
 		sut.play();
 		verify(view).readInput();
 	}
@@ -54,11 +56,10 @@ class ProgramTest {
 	
 	@Test
 	void shouldRollAndShowDice() throws IOException {
-		when(view.quit()).thenReturn(false);
 		when(view.roll()).thenReturn(true);
+		when(view.quit()).thenReturn(true);
 		int[]dice={1,1,1,2,3};
 		sut.play();
-		verify(view).roll();
 		verify(view).showDice(dice);
 	}
 }
