@@ -37,6 +37,10 @@ public class Program {
 			view.showExit();
 		}
 		
-		fail();
+		int[]dice ={1,1,1,2,3};
+		if(view.roll()) {
+			view.showDice(dice);
+			
+		}
 	}
 }
