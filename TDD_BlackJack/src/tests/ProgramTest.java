@@ -70,4 +70,47 @@ class ProgramTest {
 		verify(view).showDice(dice);
 		verify(wv).getChoice();
 	}
+	
+	@Test
+	void shouldHaveBonus() throws IOException {
+		when(view.roll()).thenReturn(true).thenReturn(false);
+		when(wv.getChoice()).thenReturn(11);
+		when(wv.getScore()).thenReturn(66);
+		sut.play();
+		verify(view,times(2)).roll();
+		verify(wv).getScore();
+		verify(wv,times(3)).getChoice();
+	}
+	
+	@Test
+	void shouldReroll() throws IOException {
+		when(view.roll()).thenReturn(true).thenReturn(false);
+		when(view.readInputInt("How many dices do you want to reroll? (0-5) ")).thenReturn(5);
+		when(view.readInputInt("Which one? ")).thenReturn(1).thenReturn(2).thenReturn(3).thenReturn(4).thenReturn(5);
+		when(wv.getChoice()).thenReturn(11);
+		int[]dice={0,0,0,0,0};
+		sut.play();
+		verify(view,times(3)).showDice(dice);
+		verify(view,times(2)).roll();
+		verify(wv,times(1)).getChoice();
+		verify(view,times(2)).readInputInt("How many dices do you want to reroll? (0-5) ");
+		verify(view,times(10)).readInputInt("Which one? ");
+	}
+	
+	@Test
+	void shouldExitWhenGameOver() throws IOException {
+		when(view.roll()).thenReturn(true).thenReturn(false);
+		when(view.quit()).thenReturn(false);
+		when(wv.getChoice()).thenReturn(11);
+		when(wv.getScore()).thenReturn(1);
+		int[]dice={0,0,0,0,0};
+		sut.play();
+		verify(view).showDice(dice);
+		verify(view,times(2)).roll();
+		verify(wv).getScore();
+		verify(wv).getChoice();
+		verify(view).quit();
+		verify(view).showWelcome();
+		verify(view,times(2)).readInput();
+	}
 }
