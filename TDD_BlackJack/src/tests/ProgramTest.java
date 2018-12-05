@@ -48,18 +48,26 @@ class ProgramTest {
 	
 	@Test
 	void shouldQuitAndShowExit() throws IOException {
+		when(view.roll()).thenReturn(true).thenReturn(false);
 		when(view.quit()).thenReturn(true);
+		when(wv.getChoice()).thenReturn(1);
 		sut.play();
+		
 		verify(view).quit();
 		verify(view).showExit();
+		verify(view).showWelcome();
+		verify(view,times(2)).readInput();
+		verify(view,times(2)).roll();
 	}
 	
 	@Test
 	void shouldRollAndShowDice() throws IOException {
-		when(view.roll()).thenReturn(true);
+		when(view.roll()).thenReturn(true).thenReturn(false);
 		when(view.quit()).thenReturn(true);
-		int[]dice={1,1,1,2,3};
+		when(wv.getChoice()).thenReturn(1);
+		int[]dice={0,0,0,0,0};
 		sut.play();
 		verify(view).showDice(dice);
+		verify(wv).getChoice();
 	}
 }
