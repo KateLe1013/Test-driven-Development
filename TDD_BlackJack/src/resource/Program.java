@@ -33,6 +33,9 @@ public class Program {
 		view.showWelcome();
 		System.out.print("\nSelect 'R' to roll, 'Q' to quit: ");
 		view.readInput();
-		fail();
+		while(!view.quit()) {
+			break;
+		}
+		view.showExit();
 	}
 }
