@@ -8,7 +8,7 @@ public class Console {
 	
 	private BufferedReader b;
 	
-	Console() {
+	public Console() {
 		b=new BufferedReader(new InputStreamReader(System.in));
 	}
 	
