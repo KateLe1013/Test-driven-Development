@@ -37,5 +37,6 @@ public class Program {
 			view.showExit();
 		}
 		
+		fail();
 	}
 }

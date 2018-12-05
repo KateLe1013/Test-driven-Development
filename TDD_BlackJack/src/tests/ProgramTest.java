@@ -51,4 +51,14 @@ class ProgramTest {
 		verify(view).quit();
 		verify(view).showExit();
 	}
+	
+	@Test
+	void shouldRollAndShowDice() throws IOException {
+		when(view.quit()).thenReturn(false);
+		when(view.roll()).thenReturn(true);
+		int[]dice={1,1,1,2,3};
+		sut.play();
+		verify(view).roll();
+		verify(view).showDice(dice);
+	}
 }
